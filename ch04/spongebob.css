@@ -1,0 +1,7 @@
+div {
+  background-color : skyblue;
+  background-size : 100px 100px;
+  background-image : url("media/spongebob.png");
+  background-repeat : no-repeat
+  background-position : left center;
+}
