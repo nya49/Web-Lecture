@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>바탕 아무 곳에나 더블 클릭</title>
+  <script type="text/javascript">
+    function change(){
+      var body = document.getElementById("bg");
+      var r = Math.round(Math.random() * 255);
+      var g = Math.round(Math.random() * 255);
+      var b = Math.round(Math.random() * 255);
+
+      var random_color = "rgb(" + r + "," + g + "," + b + ")";
+
+      body.style.backgroundColor = random_color;
+    }
+</script>
+</head>
+<body id="bg" ondblclick="change()">
+  <h3>바탕 아무 곳에나 더블 클릭</h3>
+  <hr>
+  <p>
+    바탕 아무 곳이나 <strong>더블클릭</strong>하면 배경색이
+    랜덤하게 변합니다.
+  </p>
+</body>
+</html>
