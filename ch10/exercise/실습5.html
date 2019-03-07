@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>시계 만들기</title>
+  <style>
+    div { border: 1px solid gray; background-color: lightblue; width: 120px;}
+  </style>
+  <script>
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      var d = "오전";
+      if ( h >= 12 ){ d = "오후" }
+      if ( h > 12){ h = h-12; }
+      document.getElementById('clock').innerHTML = d + "&nbsp;" + h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 1000);
+    }
+  </script>
+</head>
+<body onload="startTime()">
+  <h3>div 태그에 시계 만들기</h3>
+  <hr>
+  <div id="clock"></div>
+</body>
+</html>
